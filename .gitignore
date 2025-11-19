@@ -1,2 +1,5 @@
 .DS_Store
 mise.toml
+__pycache__
+ignore
+.ipynb_checkpoints
