@@ -7,7 +7,6 @@ def parse_chase_statement(statement_path, first_page_idx=3):
     '''
     Assumptions:
     the first page with transactions is page 4
-    last page does not contain transactions
     '''
     reader = PdfReader(statement_path)
     pages = len(reader.pages)
@@ -15,7 +14,7 @@ def parse_chase_statement(statement_path, first_page_idx=3):
     if pages <= first_page_idx:
         raise Exception("Statement does not appear to have transactions pages <= 3.") 
     print(f"processing pages {first_page_idx}-{pages-1}")
-    transaction_df = extract_transactions(statement_path, first_page_idx, pages-1)
+    transaction_df = extract_transactions(statement_path, first_page_idx, pages)
     save_transactions(statement_path, transaction_df)
     print(f"finished processing {statement_path}")
     print()
