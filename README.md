@@ -40,7 +40,7 @@ pip install camelot-py pypdf pandas
 Run the parser:
 
 ```bash
-python cli.py /path/to/ChaseStatement.pdf
+python main.py /path/to/ChaseStatement.pdf
 ```
 
 ### Optional Flags
@@ -49,20 +49,20 @@ python cli.py /path/to/ChaseStatement.pdf
   Override the assumed index of the first transaction page:
 
   ```bash
-  python cli.py statement.pdf --first-page 4
+  python main.py statement.pdf --first-page 4
   ```
 
 - `--verbose`  
   Enable extra debugging output:
 
   ```bash
-  python cli.py statement.pdf --verbose
+  python main.py statement.pdf --verbose
   ```
 
 - Both flags can be combined:
 
   ```bash
-  python cli.py statement.pdf --first-page 4 --verbose
+  python main.py statement.pdf --first-page 4 --verbose
   ```
 
 ---
